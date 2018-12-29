@@ -32,4 +32,19 @@
 //网络状态变化
 #define KNotificationNetWorkStateChange @"KNotificationNetWorkStateChange"
 
+
+#define KMainColor  [UIColor colorWithHexRGB:@"71cde6"]
+#define KBackGroundColor  [UIColor colorWithHexRGB:@"F2F4F5"]
+
+#pragma mark --------界面常量--------------------
+
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define kBotHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?34:0)
+
+#define kScreenWidth    [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight   [UIScreen mainScreen].bounds.size.height
+
 #endif /* CommonMacros_h */

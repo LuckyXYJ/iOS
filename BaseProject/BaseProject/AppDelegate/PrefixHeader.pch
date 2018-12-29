@@ -9,6 +9,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+
+#import "UtilsMacros.h"
 //全局宏
 #import "CommonMacros.h"
 
