@@ -9,6 +9,7 @@
 #import "SecondPageVC.h"
 #import "SimpleCell.h"
 #import "TallyBookVC.h"
+#import "CustomWKWebVC.h"
 @interface SecondPageVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic,strong) NSMutableArray * dataArray;
@@ -22,10 +23,10 @@
     self.navigationItem.title = @"好友";
 //    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    NSDictionary *list1 =  @{@"titleText":@"01 - FMDB",@"clickSelector":@"jumpToNextView"};
+    NSDictionary *list1 =  @{@"titleText":@"01 - FMDB",@"clickSelector":@"jumpToTallyBookView"};
     NSDictionary *list2 =  @{@"titleText":@"02 - RunTime",@"clickSelector":@""};
     NSDictionary *list3 =  @{@"titleText":@"03 - Runloop",@"clickSelector":@""};
-    NSDictionary *list4 =  @{@"titleText":@"04 - 待定",@"clickSelector":@""};
+    NSDictionary *list4 =  @{@"titleText":@"04 - WKWebView与JS交互",@"clickSelector":@"jumpCustomWebView"};
     NSDictionary *list5 =  @{@"titleText":@"05 - 待定",@"clickSelector":@""};
     NSDictionary *list6 =  @{@"titleText":@"06 - 待定",@"clickSelector":@""};
     NSDictionary *list7 =  @{@"titleText":@"07 - 待定",@"clickSelector":@""};
@@ -86,8 +87,13 @@
     }
 }
 
-- (void)jumpToNextView {
+- (void)jumpToTallyBookView {
     TallyBookVC *testVC = [[TallyBookVC alloc]init];
+    [self.navigationController pushViewController:testVC animated:YES];
+}
+
+- (void)jumpCustomWebView {
+    CustomWKWebVC *testVC = [[CustomWKWebVC alloc]init];
     [self.navigationController pushViewController:testVC animated:YES];
 }
 

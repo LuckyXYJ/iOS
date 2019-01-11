@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript">
+
+        function callOC() {
+            ≈('js调用oc方法参数')
+            window.webkit.messageHandlers.jsCalledObjectC.postMessage('js调用oc方法参数');
+        }
+    
+        function ocCallJS(message) {
+            alert(message);
+        }
+
+    </script>
+    <title>大头大头，下雨不愁</title>
+</head>
+<body>
+    <h2> 点一下试试吧 </h2>
+    <button onclick="callOC()">clickMe</button></br>
+    <a href = 'http://www.baidu.com' target = '_self'>百度</a>
+</body>
+</html>

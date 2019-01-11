@@ -16,7 +16,7 @@
     if (self) {
         //1.创建database路径
         NSString *docuPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-        docuPath = @"/Users/ios/个人/资料/fmdbSql";
+//        docuPath = @"/Users/ios/个人/资料/fmdbSql";
         NSString *dbPath = [docuPath stringByAppendingPathComponent:@"test.db"];
         NSLog(@"!!!dbPath = %@",dbPath);
         //2.创建对应路径下数据库

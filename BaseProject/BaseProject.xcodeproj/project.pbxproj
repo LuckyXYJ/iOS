@@ -10,6 +10,8 @@
 		81303C8F21D60ED50041300F /* TallyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81303C8E21D60ED50041300F /* TallyListVC.m */; };
 		81303C9321D610C50041300F /* TallListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81303C9121D610C50041300F /* TallListCell.m */; };
 		81303C9421D610C50041300F /* TallListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81303C9221D610C50041300F /* TallListCell.xib */; };
+		8175FFAA21E834B600BB897D /* CustomWKWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8175FFA921E834B600BB897D /* CustomWKWebVC.m */; };
+		8175FFAC21E865D600BB897D /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8175FFAB21E865D600BB897D /* test.html */; };
 		8178F98021CA4F7500192B79 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8178F97F21CA4F7500192B79 /* BaseNavigationController.m */; };
 		8178F99221CA59DB00192B79 /* UIColor+XYJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8178F99121CA59DB00192B79 /* UIColor+XYJColor.m */; };
 		81ACDC3521C914F000F2C854 /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81ACDC3421C914F000F2C854 /* BaseProjectTests.m */; };
@@ -72,6 +74,9 @@
 		81303C9021D610C50041300F /* TallListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TallListCell.h; sourceTree = "<group>"; };
 		81303C9121D610C50041300F /* TallListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TallListCell.m; sourceTree = "<group>"; };
 		81303C9221D610C50041300F /* TallListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TallListCell.xib; sourceTree = "<group>"; };
+		8175FFA821E834B600BB897D /* CustomWKWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomWKWebVC.h; sourceTree = "<group>"; };
+		8175FFA921E834B600BB897D /* CustomWKWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomWKWebVC.m; sourceTree = "<group>"; };
+		8175FFAB21E865D600BB897D /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		8178F97E21CA4F7500192B79 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		8178F97F21CA4F7500192B79 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		8178F99021CA59DB00192B79 /* UIColor+XYJColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+XYJColor.h"; sourceTree = "<group>"; };
@@ -414,6 +419,9 @@
 				81C14EE221D3544400A44F80 /* TallyBookVC.m */,
 				81303C8D21D60ED50041300F /* TallyListVC.h */,
 				81303C8E21D60ED50041300F /* TallyListVC.m */,
+				8175FFA821E834B600BB897D /* CustomWKWebVC.h */,
+				8175FFA921E834B600BB897D /* CustomWKWebVC.m */,
+				8175FFAB21E865D600BB897D /* test.html */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -674,6 +682,7 @@
 				81ACDC5721C9174D00F2C854 /* Main.storyboard in Resources */,
 				81ACDC5521C9174D00F2C854 /* Assets.xcassets in Resources */,
 				81303C9421D610C50041300F /* TallListCell.xib in Resources */,
+				8175FFAC21E865D600BB897D /* test.html in Resources */,
 				81ACDC5621C9174D00F2C854 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,6 +732,7 @@
 				81C14ED821D1E12600A44F80 /* MASCompositeConstraint.m in Sources */,
 				81C14EF121D3573700A44F80 /* FMDatabaseQueue.m in Sources */,
 				8178F99221CA59DB00192B79 /* UIColor+XYJColor.m in Sources */,
+				8175FFAA21E834B600BB897D /* CustomWKWebVC.m in Sources */,
 				81C14EA021D1DE8100A44F80 /* SecondPageVC.m in Sources */,
 				81C14EDD21D1E12600A44F80 /* MASConstraint.m in Sources */,
 				81ACDC6921C91C9B00F2C854 /* BaseViewController.m in Sources */,
