@@ -33,19 +33,23 @@
 
 - (void)initUI {
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-    WKUserContentController *userController = [[WKUserContentController alloc] init];
-    
-    [userController addScriptMessageHandler:self name:@"jsCalledObjectC"];
-    configuration.userContentController = userController;
+//    WKUserContentController *userController = [[WKUserContentController alloc] init];
+//    
+//    [userController addScriptMessageHandler:self name:@"jsCalledObjectC"];
+//    [userController addScriptMessageHandler:self name:@"savePhotoToloacal"];
+//    [userController addScriptMessageHandler:self name:@"sharePhoto"];
+//    configuration.userContentController = userController;
     
     self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) configuration:configuration];
     self.webView.navigationDelegate = self;
 
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
-    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
-    [self.webView loadHTMLString:htmlCont baseURL:nil];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.1.119:82/app/html/#/materiel?token=882d8497e1bb46018d8ca7d1c9057dad&uId=44"]]];
     
-//    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
+//    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
+//    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
+//    [self.webView loadHTMLString:htmlCont baseURL:nil];
+    
+    
     
     [self.view addSubview:self.webView];
     
@@ -115,6 +119,8 @@
     
     if ([message.name isEqualToString:@"jsCalledObjectC"]) {
         NSLog(@"%@",message.body);
+        
+        
     }
 }
 

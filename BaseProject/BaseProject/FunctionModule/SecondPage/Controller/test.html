@@ -7,8 +7,9 @@
     <script type="text/javascript">
 
         function callOC() {
-            ≈('js调用oc方法参数')
-            window.webkit.messageHandlers.jsCalledObjectC.postMessage('js调用oc方法参数');
+            
+<!--            window.webkit.messageHandlers.jsCalledObjectC.postMessage(["Saab","Volvo","BMW"],'js调用oc方法参数');-->
+            window.webkit.messageHandlers.jsCalledObjectC.postMessage('bhub');
         }
     
         function ocCallJS(message) {
@@ -19,7 +20,7 @@
     <title>大头大头，下雨不愁</title>
 </head>
 <body>
-    <h2> 点一下试试吧 </h2>
+    <h2> 点击调用oc </h2>
     <button onclick="callOC()">clickMe</button></br>
     <a href = 'http://www.baidu.com' target = '_self'>百度</a>
 </body>

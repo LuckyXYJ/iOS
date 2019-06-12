@@ -31,6 +31,30 @@
     [btn addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
+    
+    UILabel *phoneLbl = [[UILabel alloc] initWithFrame:CGRectMake(18, 270, kScreenWidth - 36, 40)];
+    phoneLbl.font = [UIFont systemFontOfSize:14];
+    phoneLbl.userInteractionEnabled = YES;
+    NSMutableAttributedString *phoneStr = [[NSMutableAttributedString alloc] initWithString:@"客服电话： 4000-717-100"];
+    [phoneStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(5,phoneStr.length-5)];
+    [phoneStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0,5)];
+    
+    NSTextAttachment *attchImage = [[NSTextAttachment alloc] init];
+    // 表情图片
+    attchImage.image = [UIImage imageNamed:@"login_phone_call"];
+    // 设置图片大小
+    attchImage.bounds = CGRectMake(0, 0, 12.25, 13);
+    NSAttributedString *stringImage = [NSAttributedString attributedStringWithAttachment:attchImage];
+    [phoneStr insertAttributedString:stringImage atIndex:0];
+    
+    phoneLbl.attributedText = phoneStr;
+    phoneLbl.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:phoneLbl];
+    [phoneLbl addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(phoneSelected)]];
+}
+
+- (void)phoneSelected {
+    
 }
 
 -(void)clickButton {

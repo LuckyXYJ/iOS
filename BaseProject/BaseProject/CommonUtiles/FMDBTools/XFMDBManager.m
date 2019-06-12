@@ -115,7 +115,7 @@
     FMResultSet* rs = [_db executeQuery:sqlStr];
     while ([rs next]) {
         TallyModel* brandInfo = [[TallyModel alloc] init];
-        brandInfo.tallyId = [rs intForColumn:@"id"];
+        brandInfo.tallyId = [rs intForColumn:@"tallyId"];
         brandInfo.wechat = [rs stringForColumn:@"wechat"];
         brandInfo.alipay = [rs stringForColumn:@"alipay"];
         brandInfo.cmbBank = [rs stringForColumn:@"cmbBank"];
@@ -161,7 +161,7 @@
     FMResultSet* rs = [_db executeQuery:sqlStr];
     while ([rs next]) {
         TallyModel* brandInfo = [[TallyModel alloc] init];
-        brandInfo.tallyId = [rs intForColumn:@"id"];
+        brandInfo.tallyId = [rs intForColumn:@"tallyId"];
         brandInfo.wechat = [rs stringForColumn:@"wechat"];
         brandInfo.alipay = [rs stringForColumn:@"alipay"];
         brandInfo.cmbBank = [rs stringForColumn:@"cmbBank"];
@@ -180,7 +180,7 @@
 - (BOOL)deleteContent:(int)primaryKey
 {
     [_db beginTransaction];
-    NSString *str = [NSString stringWithFormat:@"DELETE FROM TallyData WHERE id = %d or id = 14",primaryKey];
+    NSString *str = [NSString stringWithFormat:@"DELETE FROM TallyData WHERE tallyId = %d",primaryKey];
     BOOL success = [_db executeUpdate:str];
     [_db commit];
     if(!success ||[_db hadError])
@@ -196,7 +196,7 @@
     
     NSMutableArray *arr = [NSMutableArray array];
     for (int i = 0; i < primaryKeys.count; i++) {
-        [arr addObject:[NSString stringWithFormat:@"id = %d",[primaryKeys[i] intValue]]];
+        [arr addObject:[NSString stringWithFormat:@"tallyId = %d",[primaryKeys[i] intValue]]];
     }
     NSString *str = [arr componentsJoinedByString:@" or "];
     [_db beginTransaction];

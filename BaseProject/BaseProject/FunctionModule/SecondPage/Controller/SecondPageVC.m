@@ -10,6 +10,10 @@
 #import "SimpleCell.h"
 #import "TallyBookVC.h"
 #import "CustomWKWebVC.h"
+#import "AccessPermissionVC.h"
+#import "TakeScreenShotVC.h"
+#import "GCDDemoVC.h"
+
 @interface SecondPageVC ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView * tableView;
 @property (nonatomic,strong) NSMutableArray * dataArray;
@@ -27,9 +31,9 @@
     NSDictionary *list2 =  @{@"titleText":@"02 - RunTime",@"clickSelector":@""};
     NSDictionary *list3 =  @{@"titleText":@"03 - Runloop",@"clickSelector":@""};
     NSDictionary *list4 =  @{@"titleText":@"04 - WKWebView与JS交互",@"clickSelector":@"jumpCustomWebView"};
-    NSDictionary *list5 =  @{@"titleText":@"05 - 待定",@"clickSelector":@""};
-    NSDictionary *list6 =  @{@"titleText":@"06 - 待定",@"clickSelector":@""};
-    NSDictionary *list7 =  @{@"titleText":@"07 - 待定",@"clickSelector":@""};
+    NSDictionary *list5 =  @{@"titleText":@"05 - 权限读取",@"clickSelector":@"accessPermission"};
+    NSDictionary *list6 =  @{@"titleText":@"06 - 截取屏幕",@"clickSelector":@"takeScreenShotAction"};
+    NSDictionary *list7 =  @{@"titleText":@"07 - GCD",@"clickSelector":@"gcdAction"};
     NSDictionary *list8 =  @{@"titleText":@"08 - 待定",@"clickSelector":@""};
     NSDictionary *list9 =  @{@"titleText":@"09 - 待定",@"clickSelector":@""};
     NSDictionary *list10 = @{@"titleText":@"10 - 待定",@"clickSelector":@""};
@@ -97,6 +101,23 @@
     [self.navigationController pushViewController:testVC animated:YES];
 }
 
+- (void)accessPermission {
+    AccessPermissionVC *testVC = [[AccessPermissionVC alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:testVC animated:YES];
+}
+
+- (void)takeScreenShotAction {
+    TakeScreenShotVC *testVC = [[TakeScreenShotVC alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:testVC animated:YES];
+}
+
+- (void)gcdAction {
+    GCDDemoVC *testVC = [[GCDDemoVC alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:testVC animated:YES];
+}
 /*
 #pragma mark - Navigation
 

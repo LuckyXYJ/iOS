@@ -12,7 +12,7 @@
 
 - (void)tallyCalculate {
     
-    CGFloat total = [self.wechat floatValue] + [self.alipay floatValue] + [self.cmbBank floatValue] + [self.cmbVisa floatValue] + [self.bcVisa floatValue] + [self.pinganVisa floatValue] - 43000 - 75000 -33000;
+    CGFloat total = [self.wechat floatValue] + [self.alipay floatValue] + [self.cmbBank floatValue] + [self.cmbVisa floatValue] + [self.bcVisa floatValue] + [self.pinganVisa floatValue] - 43000 - 50000 -33000;
     
     self.totalMoney = [NSString stringWithFormat:@"%.2f",total];
     self.time = [self getTimeString];
